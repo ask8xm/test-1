@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Start Gonit daemon
+# Copyright 2018 Bitnami.com All Rights Reserved
+#
+
+if [ -x /usr/bin/gonit ]; then
+  # Start gonit
+  /usr/bin/gonit
+  # Make sure all services are monitored on start up
+  /usr/bin/gonit monitor all
+fi
